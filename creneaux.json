@@ -1,0 +1,42 @@
+[
+    {
+        "date": "10 Feb 23 15:00",
+        "available": true
+    },
+    {
+        "date": "10 Feb 23 15:35",
+        "available": true
+    },
+    {
+        "date": "10 Feb 23 16:10",
+        "available": true
+    },
+    {
+        "date": "10 Feb 23 16:45",
+        "available": true
+    },
+    {
+        "date": "10 Feb 23 17:20",
+        "available": true
+    },
+    {
+        "date": "11 Feb 23 15:00",
+        "available": false
+    },
+    {
+        "date": "11 Feb 23 15:35",
+        "available": true
+    },
+    {
+        "date": "11 Feb 23 16:10",
+        "available": true
+    },
+    {
+        "date": "11 Feb 23 16:45",
+        "available": true
+    },
+    {
+        "date": "11 Feb 23 17:20",
+        "available": true
+    }
+]
