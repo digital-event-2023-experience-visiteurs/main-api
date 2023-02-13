@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js",
+    "dev": "nodemon app.js --ignore creneaux.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module",
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "airtable": "^0.11.6",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
