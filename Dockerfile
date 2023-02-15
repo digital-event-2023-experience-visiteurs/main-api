@@ -5,6 +5,7 @@ WORKDIR /app
 COPY package.json ./
 COPY package-lock.json ./
 COPY .env ./
+COPY creneaux.json ./
 COPY app.js ./
 ADD routes ./routes/
 RUN npm ci
