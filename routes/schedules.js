@@ -112,13 +112,6 @@ schedulesRouter.post("/reserve", async (req, res) => {
 		successfullyReservedSchedules.push(schedule)
 	}
 
-	if (successfullyReservedSchedules.length === 0) {
-		res.status(400).send({
-			message: finalMessage,
-		})
-		return
-	}
-
 	await pushNewEntryToAirtable({
 		email: user.data.email,
 		lastname: user.data.lastname,
