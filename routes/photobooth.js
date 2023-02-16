@@ -3,6 +3,7 @@ import fs from "fs"
 import { v4 as uuidv4 } from "uuid"
 
 const photoboothRouter = express.Router()
+const imageDir = "./imgs"
 
 function getImage(name) {
 	try {
@@ -16,6 +17,10 @@ photoboothRouter.post("/", async (req, res, next) => {
 	const imgName = uuidv4()
 	const data = req.body.data
 
+	if (!fs.existsSync(imageDir)) {
+		fs.mkdirSync(imageDir)
+	}
+
 	if (data == undefined) {
 		res.status(400).send({ message: "Invalid image data." })
 		return
@@ -24,7 +29,7 @@ photoboothRouter.post("/", async (req, res, next) => {
 	const parsedData = data.replace(/^data:image\/\w+;base64,/, "")
 	const buffer = Buffer.from(parsedData, "base64")
 
-	fs.writeFileSync(`./imgs/${imgName}.png`, buffer)
+	fs.writeFileSync(`${imageDir}/${imgName}.png`, buffer)
 
 	res.send({ imgName })
 })
